@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>董浩</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  function add(addTime, units, time = new Date()) {
+    let newAddTime
+    if (units.toUpperCase() === 'DAY') newAddTime = addTime * 24 * 60 * 60 * 1000
+    if (units.toUpperCase() === 'WEEK') newAddTime = addTime * 7 * 24 * 60 * 60 * 1000
+    if (units.toUpperCase() === 'HOUR') newAddTime = addTime * 60 * 60 * 1000
+    if (units.toUpperCase() === 'MINUTE') newAddTime = addTime * 60 * 1000
+    if (units.toUpperCase() === 'SECONE') newAddTime = addTime * 1000
+    if (units.toUpperCase() === 'MILLISECOND') newAddTime = addTime
+    // 获取输入的时间的时间戳
+    let newTime = new Date(time).getTime()
+    let result = new Date(newAddTime + newTime)
+    return `${result.getFullYear()}/${result.getMonth() + 1}/${result.getDate()} ${result.getHours()}:${result.getMinutes()}:${result.getSeconds()}`
+  }
+  console.log(add(7, 'day'));
+  console.log(add(7, 'day', '2024/10/8 12:00:23'));
+  console.log(add(18, 'week', '2024/10/8 12:00:23'));
+</script>
+
+</html>

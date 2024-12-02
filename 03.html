@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  function isBetween(time1, time2, time3) {
+    let t1 = new Date(time1).getTime()
+    let t2 = new Date(time2).getTime()
+    let t3 = new Date(time3).getTime()
+    if (t1 > t2 && t1 < t3) {
+      return true
+    } else {
+      return false
+    }
+  }
+  console.log(isBetween('2010-10-20', '2010-10-19', '2010-10-25'));
+
+</script>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+  function isTomorrow(time) {
+    if ((new Date(time).getTime() - Date.now()) / (1000 * 60 * 60) > 0 && (new Date(time).getTime() - Date.now()) / (1000 * 60 * 60) < 24) {
+      return true
+    } else {
+      return false
+    }
+  }
+  console.log(isTomorrow('2024/12/3'));
+
+</script>
+
+</html>
