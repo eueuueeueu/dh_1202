@@ -8,17 +8,22 @@
 </head>
 
 <body>
-
+  <p>4、定义⼀个 isTomorrow 函数来判断参数是否是明天。</p>
 </body>
 <script>
-  function isTomorrow(time) {
-    if ((new Date(time).getTime() - Date.now()) / (1000 * 60 * 60) > 0 && (new Date(time).getTime() - Date.now()) / (1000 * 60 * 60) < 24) {
+  function isTomorrow(target) {
+    let todayDate = new Date()
+    let targetDate = new Date(target)
+    let millissecondPerDay = 1 * 24 * 60 * 60 * 1000
+    let tommorrowStartDate = new Date(todayDate.toLocaleDateString()).getTime() + millissecondPerDay
+    let targetStartDate = new Date(targetDate.toLocaleDateString()).getTime()
+    if (tommorrowStartDate === targetStartDate) {
       return true
     } else {
       return false
     }
   }
-  console.log(isTomorrow('2024/12/3'));
+  console.log(isTomorrow('2024/12/5 23:59:59'));
 
 </script>
 

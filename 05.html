@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+  <p>5、定义⼀个函数 weekOfYear 返回参数年份中有多少个星期。</p>
 </body>
 <script>
   function weekOfYear(time) {
@@ -43,9 +43,9 @@
       default:
         break;
     }
-    return Math.floor((month + date) / 7)
+    return Math.ceil((month + date) / 7)
   }
-  console.log(weekOfYear('2024/12/1'));
+  console.log(weekOfYear('2024/12/31'));
 
 </script>
 

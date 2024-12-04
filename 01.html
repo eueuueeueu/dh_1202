@@ -8,7 +8,7 @@
 </head>
 
 <body>
-
+  <p>1、【时间增加】返回增加⼀定时间的时间,各个传⼊的单位对⼤⼩写不敏感，⽀持缩写和复数。 请注意，缩写是区分⼤⼩写的。</p>
 </body>
 <script>
   function add(addTime, units, time = new Date()) {
@@ -27,6 +27,8 @@
   console.log(add(7, 'day'));
   console.log(add(7, 'day', '2024/10/8 12:00:23'));
   console.log(add(18, 'week', '2024/10/8 12:00:23'));
+  // new Date().toLocaleString()  //YYYY/MM/DD hh:mm:ss
+  // new Date().toLocaleDateString()  //YYYY/MM/DD
 </script>
 
 </html>
